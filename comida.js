@@ -9,15 +9,13 @@ function calcula(){
     console.log(tempoPreparo) 
     console.log(diasMes) 
 
-    let pesoMedia = (0.792 * 0.873 * 1.27 * 0.559 * 0.672 * 0.714 * 0.623) / 7;
+    let pesoMedia = (0.792 + 0.873 + 1.27 + 0.559 + 0.672 + 0.714 + 0.623) / 7;
   
     let prodEm3Horas = (pesoMedia * 4) * 3;
 
-    let receitaPeso = precoKg * prodEm3Horas;
+    let receitaTotal = precoKg * prodEm3Horas * diasMes;
 
     let prodDias = prodEm3Horas * diasMes;
-
-    let receitaTotal = receitaPeso * diasMes;
   
     console.log("O peso total vendido por mês é de " + prodDias + "kg");
     console.log("A receita no mês foi de " + receitaTotal + "reais");
